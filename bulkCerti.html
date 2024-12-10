@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sub_container">
+      
+          <!-- Upload Excel File -->
+          <div class="upload-section">
+            <h2>Upload Excel File</h2>
+            <input type="file" id="excelInput" accept=".xlsx, .xls">
+          </div>
+      
+          <!-- Upload PNG Template -->
+          <div class="template-section">
+            <h2>Upload Certificate Template (PNG)</h2>
+            <input type="file" id="templateInput" accept="image/png">
+            <img id="templatePreview" alt="Template Preview" style="display: none; max-width: 100%; margin-top: 10px;">
+          </div>
+      
+          <!-- Content Box -->
+          <div class="content-section">
+            <h2>Write Additional Content</h2>
+            <textarea id="contentBox" placeholder="Enter content to include on all certificates..."></textarea>
+          </div>
+      
+          <!-- Generate Button -->
+          <button id="generateBtn">Generate Certificates</button>
+      
+          <!-- Canvas for Processing -->
+          <canvas id="certificateCanvas" style="display: none;"></canvas>
+        </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="bulkCerti.js"></script>
+</body>
+</html>
